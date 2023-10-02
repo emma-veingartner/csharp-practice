@@ -27,14 +27,27 @@ namespace CalculatorApp
 
                 Menu options = (Menu)int.Parse(Console.ReadLine());
 
-                Console.WriteLine(options);
+                switch (options)
+                {
+
+                    case Menu.Exit:
+                        choosedExit=true;
+                        break;
+                }
+
+                
+                Console.Clear(); //Clear the console after select an option
 
                 
 
             }
 
-            
-            
+
+
+
+            // Console.WriteLine(options);
+            // Console.ReadLine(); //Pause on the console
+             
 
 
 
