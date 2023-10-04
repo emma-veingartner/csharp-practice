@@ -3,13 +3,10 @@ using System.Reflection.Emit;
 
 namespace CalculatorApp
 {
-    
-    internal class Program
-    { 
-        
 
+    internal class Program
+    {
         enum Menu { Sum = 1, Subtraction = 2, Division = 3, Multiplication = 4, Power = 5, Root = 6, Exit = 7 }
-       
 
         static void Main(string[] args)
         {
@@ -29,28 +26,30 @@ namespace CalculatorApp
 
                 switch (options)
                 {
-
+                    case Menu.Sum:
+                        Sum();
+                        break;
                     case Menu.Exit:
-                        choosedExit=true;
+                        choosedExit = true;
                         break;
                 }
 
-                
                 Console.Clear(); //Clear the console after select an option
-
-                
-
             }
+        }
 
-
-
-
-            // Console.WriteLine(options);
-            // Console.ReadLine(); //Pause on the console
-             
-
-
+        static void Sum()
+        {
+            Console.WriteLine("Sum of two numbers: ");
+            Console.WriteLine("Type the first number: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the second number:");
+            int b = int.Parse(Console.ReadLine());
+            int result = a + b;
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
 
         }
     }
-}
+}   
