@@ -29,6 +29,15 @@ namespace CalculatorApp
                     case Menu.Sum:
                         Sum();
                         break;
+                    case Menu.Subtraction:
+                        Sub();
+                        break;
+                    case Menu.Division: 
+                        Div();
+                        break;
+                    case Menu.Multiplication:
+                        Mult();
+                        break;
                     case Menu.Exit:
                         choosedExit = true;
                         break;
@@ -46,6 +55,48 @@ namespace CalculatorApp
             Console.WriteLine("Type the second number:");
             int b = int.Parse(Console.ReadLine());
             int result = a + b;
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
+
+        }
+
+        static void Sub()
+        {
+            Console.WriteLine("Sutraction of two numbers: ");
+            Console.WriteLine("Type the first number: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the second number:");
+            int b = int.Parse(Console.ReadLine());
+            int result = a - b;
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
+
+        }
+
+        static void Div()
+        {
+            Console.WriteLine("Division of two numbers: ");
+            Console.WriteLine("Type the first number: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the second number:");
+            int b = int.Parse(Console.ReadLine());
+            float result = (float)a/(float)b;
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
+
+        }
+
+        static void Mult()
+        {
+            Console.WriteLine("Multiplication of two numbers: ");
+            Console.WriteLine("Type the first number: ");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the second number:");
+            int b = int.Parse(Console.ReadLine());
+            int result = a * b;
             Console.WriteLine($"The result is: {result}");
             Console.WriteLine("Press ENTER to go back to the menu");
             Console.ReadLine();
