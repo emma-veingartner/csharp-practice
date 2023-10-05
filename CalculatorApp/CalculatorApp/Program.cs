@@ -38,6 +38,12 @@ namespace CalculatorApp
                     case Menu.Multiplication:
                         Mult();
                         break;
+                    case Menu.Power:   
+                        Pow(); 
+                        break;
+                    case Menu.Root:
+                        Root();
+                        break;
                     case Menu.Exit:
                         choosedExit = true;
                         break;
@@ -97,6 +103,32 @@ namespace CalculatorApp
             Console.WriteLine("Type the second number:");
             int b = int.Parse(Console.ReadLine());
             int result = a * b;
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
+
+        }
+
+        static void Pow()
+        {
+            Console.WriteLine("Power of one number: ");
+            Console.WriteLine("Type the base number: ");
+            int baseNum = int.Parse(Console.ReadLine());
+            Console.WriteLine("Type the exponent number:");
+            int expo = int.Parse(Console.ReadLine());
+            int result = (int)Math.Pow(baseNum, expo);
+            Console.WriteLine($"The result is: {result}");
+            Console.WriteLine("Press ENTER to go back to the menu");
+            Console.ReadLine();
+
+        }
+
+        static void Root()
+        {
+            Console.WriteLine("Root of one number: ");
+            Console.WriteLine("Type the number: ");
+            int a = int.Parse(Console.ReadLine());
+            double result = Math.Sqrt(a);
             Console.WriteLine($"The result is: {result}");
             Console.WriteLine("Press ENTER to go back to the menu");
             Console.ReadLine();
